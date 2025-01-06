@@ -16,7 +16,7 @@ body {
     padding: 10px 0;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     z-index: 1000;
-    height: 110vh;
+    height: 101vh;
 }   
 
 .navbar a {
@@ -144,6 +144,8 @@ img {
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s, box-shadow 0.3s;
+    align-items: center;
+    gap: 10px;
 }
 
 .education-item:hover {
@@ -172,4 +174,9 @@ img {
 
 .education-item ul li strong {
     color: #333;
+}
+
+.education-item i {
+    font-size: 24px;
+    color: #007BFF;
 }
