@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Slideshow with Navbar</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <table style="width: 100%; border-collapse: collapse;">
+        <tr>
+            <td colspan="2">
+                <div class="slideshow-container">
+                    <img src="img/gedung.jpg" alt="Slide 1" class="slides active">
+                    <img src="img/lempuyang.webp" alt="Slide 2" class="slides">
+                    <img src="img/prank.jpeg" alt="Slide 3" class="slides">
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td style="width: 20%;">
+                <div class="navbar">
+                    <a href="index.html">Home</a>
+                    <a href="education.html">Education</a>
+                    <a href="#family">Family</a>
+                    <a href="#about">About</a>
+                </div>
+            </td>
+            <td style="width: 80%;">
+                <div class="section" id="education">
+                    <h2>Education</h2>
+                    <div class="education-content">
+                        <div class="education-item">
+                            <h3>Riwayat Pendidikan</h3>
+                            <ul>
+                                <li><strong>SMP Negeri 3 Abiansemal</strong> (2018-2021)</li>
+                                <li><strong>SMK Negeri 1 Denpasar</strong> (2021-2024)</li>
+                                <li><strong>Institut Bisnis dan Teknologi Indonesia (INSTIKI)</strong> Manajemen Data dan Informasi (2024-sekarang)</li>
+                            </ul>
+                        </div>
+                        <div class="education-item">
+                            <h3>Penghargaan Akademik</h3>
+                            <ul>
+                                <li>Junior Programming</li>
+                                <li>Beasiswa Penuh dari INSTIKI</li>
+                            </ul>
+                        </div>
+                        <div class="education-item">
+                            <h3>Kegiatan UKM</h3>
+                            <ul>
+                                <li>Anggota Unit Kegiatan Mahasiswa Tabuh</li>
+                                <li>Anggota Unit Kegiatan Mahasiswa Instiki Developer Club</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </td>
+        </tr>
+    </table>
+
+    <!-- Optional Sections -->
+    <!--
+    <div class="section" id="family">
+        <h2>Family</h2>
+        <p>This is the Family section. Share memories, stories, or other personal content here.</p>
+    </div>
+
+    <div class="section" id="about">
+        <h2>About</h2>
+        <p>This is the About section. Introduce yourself or your website here.</p>
+    </div>
+    -->
+
+    <script src="js/script.js"></script>
+</body>
+</html>
