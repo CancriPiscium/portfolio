@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Slideshow with Navbar</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <table style="width: 100%; border-collapse: collapse;">
+        <tr>
+            <th colspan="2">
+                <div class="slideshow-container">
+                    <img src="img/gedung.jpg" alt="Slide 1" class="slides active">
+                    <img src="img/lempuyang.webp" alt="Slide 2" class="slides">
+                    <img src="img/prank.jpeg" alt="Slide 3" class="slides">
+                </div>
+            </th>
+        </tr>
+        <tr>
+            <th style="width: 15%;">
+                <div class="navbar">
+                    <a href="index.html">Home</a>
+                    <a href="education.html">Education</a>
+                    <a href="family.html">Family</a>
+                    <a href="#about">About</a>
+                </div>
+            </th>
+            <th style="width: 85%;">
+                <div class="section" id="family">
+                    <h2>Family</h2>
+                    <p>This is the Family section. Share memories, stories, or other personal content here.</p>
+                </div>
+            </th>
+        </tr>
+    </table>
+
+    <!--
+    <div class="section" id="about">
+        <h2>About</h2>
+        <p>This is the About section. Introduce yourself or your website here.</p>
+    </div>
+    -->
+
+    <script src="js/script.js"></script>
+</body>
+</html>

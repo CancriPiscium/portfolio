@@ -16,7 +16,7 @@ body {
     padding: 10px 0;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     z-index: 1000;
-    height: 101vh;
+    height: 80vh;
 }   
 
 .navbar a {
@@ -26,7 +26,6 @@ body {
     margin: 0 10px;
     font-size: 14px;
     font-weight: 500;
-    border-radius: 5px;
     background-color: transparent;
     transition: all 0.3s ease-in-out;
 }
@@ -100,7 +99,7 @@ img {
 .section {
     padding: 50px 20px;
     text-align: center;
-    background-color: #f9f9f9;
+    background-color: white;
 }
 
 .section h2 {
@@ -116,9 +115,8 @@ img {
 
 /* Education Section */
 #education {
-    background-color: #f9f9f9;
+    background-color: white;
     padding: 20px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 #education h2 {
@@ -139,7 +137,7 @@ img {
 
 .education-item {
     flex: 1 1 calc(50% - 20px); /* 50% width with gap */
-    background-color: #fff;
+    background-color: whitesmoke;
     padding: 15px;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
