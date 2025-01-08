@@ -88,7 +88,7 @@ img {
 .slides {
     display: none;
     width: 100%;
-    height: 400px;
+    height: 700px;
 }
 
 .slides.active {
@@ -177,4 +177,139 @@ img {
 .education-item i {
     font-size: 24px;
     color: #007BFF;
+}
+
+#family{
+    background-color: white;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+
+#family h2{
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.family-content{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.family-item{
+    background-color: whitesmoke;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: calc(30% - 20px);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.family-item:hover{
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.family-item img{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+    object-fit: cover;
+}
+
+.family-item h3{
+    font-size: 20px;
+    color: #007BFF;
+    margin-bottom: 10px;
+}
+
+.family-item p{
+    font-size: 16px;
+    color: #555;
+    margin: 5px 0;
+}
+
+@media (max-width: 768px){
+    .family-item{
+        width: calc(50% - 20px);
+    }
+}
+
+@media (max-width: 480px){
+    .family-item{
+        width: 100%;
+    }
+}
+
+/* About Section */
+#about {
+    background-color: #f3f3f3;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#about h2 {
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.about-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-photo {
+    flex: 1;
+    max-width: 200px;
+    text-align: center;
+}
+
+.about-photo img {
+    width: 100%;
+    border-radius: 50%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.about-text {
+    flex: 2;
+    font-size: 16px;
+    color: #555;
+    line-height: 1.8;
+}
+
+.about-text strong {
+    color: #007BFF;
+}
+
+.about-text em {
+    color: #555;
+    font-style: italic;
+}
+
+@media (max-width: 768px) {
+    .about-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-photo {
+        margin-bottom: 20px;
+    }
 }
