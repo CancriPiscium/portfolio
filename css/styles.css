@@ -116,16 +116,28 @@ img {
 /* Education Section */
 #education {
     background-color: white;
-    padding: 20px;
+    padding: 0;
+    border-radius: 10px;
 }
 
 #education h2 {
     font-size: 28px;
     color: #333;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
     text-align: center;
     text-transform: uppercase;
-    letter-spacing: 1px;
+    letter-spacing: 1.5px;
+    position: relative;
+}
+
+#education h2::after {
+    content: "";
+    width: 80px;
+    height: 3px;
+    background-color: #007BFF;
+    display: block;
+    margin: 10px auto 0;
+    border-radius: 2px;
 }
 
 .education-content {
@@ -138,47 +150,55 @@ img {
 .education-item {
     flex: 1 1 calc(50% - 20px); /* 50% width with gap */
     background-color: whitesmoke;
-    padding: 15px;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s, box-shadow 0.3s;
-    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     gap: 10px;
+    cursor: pointer;
 }
 
 .education-item:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transform: translateY(-8px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    background-color: #f9f9f9;
 }
 
 .education-item h3 {
     font-size: 20px;
     color: #007BFF;
-    margin-bottom: 10px;
-    border-bottom: 2px solid #007BFF;
+    margin-bottom: 15px;
+    border-bottom: 3px solid #007BFF;
     padding-bottom: 5px;
 }
 
 .education-item ul {
     list-style-type: none;
     padding: 0;
+    margin: 0;
 }
 
 .education-item ul li {
     font-size: 16px;
     color: #555;
-    margin-bottom: 8px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
 }
 
 .education-item ul li strong {
     color: #333;
+    font-weight: 600;
 }
 
-.education-item i {
-    font-size: 24px;
+.education-item ul li i {
+    font-size: 18px;
     color: #007BFF;
 }
-
 #family{
     background-color: white;
     padding: 20px;
