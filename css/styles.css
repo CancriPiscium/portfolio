@@ -16,7 +16,7 @@ body {
     padding: 10px 0;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     z-index: 1000;
-    height: 101vh;
+    height: 80vh;
 }   
 
 .navbar a {
@@ -26,7 +26,6 @@ body {
     margin: 0 10px;
     font-size: 14px;
     font-weight: 500;
-    border-radius: 5px;
     background-color: transparent;
     transition: all 0.3s ease-in-out;
 }
@@ -89,7 +88,7 @@ img {
 .slides {
     display: none;
     width: 100%;
-    height: 400px;
+    height: 700px;
 }
 
 .slides.active {
@@ -100,7 +99,7 @@ img {
 .section {
     padding: 50px 20px;
     text-align: center;
-    background-color: #f9f9f9;
+    background-color: white;
 }
 
 .section h2 {
@@ -116,18 +115,29 @@ img {
 
 /* Education Section */
 #education {
-    background-color: #f9f9f9;
-    padding: 20px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: white;
+    padding: 0;
+    border-radius: 10px;
 }
 
 #education h2 {
     font-size: 28px;
     color: #333;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
     text-align: center;
     text-transform: uppercase;
-    letter-spacing: 1px;
+    letter-spacing: 1.5px;
+    position: relative;
+}
+
+#education h2::after {
+    content: "";
+    width: 80px;
+    height: 3px;
+    background-color: #007BFF;
+    display: block;
+    margin: 10px auto 0;
+    border-radius: 2px;
 }
 
 .education-content {
@@ -139,44 +149,187 @@ img {
 
 .education-item {
     flex: 1 1 calc(50% - 20px); /* 50% width with gap */
-    background-color: #fff;
-    padding: 15px;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: whitesmoke;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s, box-shadow 0.3s;
-    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     gap: 10px;
+    cursor: pointer;
 }
 
 .education-item:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transform: translateY(-8px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    background-color: #f9f9f9;
 }
 
 .education-item h3 {
     font-size: 20px;
     color: #007BFF;
-    margin-bottom: 10px;
-    border-bottom: 2px solid #007BFF;
+    margin-bottom: 15px;
+    border-bottom: 3px solid #007BFF;
     padding-bottom: 5px;
 }
 
 .education-item ul {
     list-style-type: none;
     padding: 0;
+    margin: 0;
 }
 
 .education-item ul li {
     font-size: 16px;
     color: #555;
-    margin-bottom: 8px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
 }
 
 .education-item ul li strong {
     color: #333;
+    font-weight: 600;
 }
 
-.education-item i {
-    font-size: 24px;
+.education-item ul li i {
+    font-size: 18px;
     color: #007BFF;
+}
+#family{
+    background-color: white;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+
+#family h2{
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.family-content{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.family-item{
+    background-color: whitesmoke;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: calc(30% - 20px);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.family-item:hover{
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.family-item img{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+    object-fit: cover;
+}
+
+.family-item h3{
+    font-size: 20px;
+    color: #007BFF;
+    margin-bottom: 10px;
+}
+
+.family-item p{
+    font-size: 16px;
+    color: #555;
+    margin: 5px 0;
+}
+
+@media (max-width: 768px){
+    .family-item{
+        width: calc(50% - 20px);
+    }
+}
+
+@media (max-width: 480px){
+    .family-item{
+        width: 100%;
+    }
+}
+
+/* About Section */
+#about {
+    background-color: #f3f3f3;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#about h2 {
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.about-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-photo {
+    flex: 1;
+    max-width: 200px;
+    text-align: center;
+}
+
+.about-photo img {
+    width: 100%;
+    border-radius: 50%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.about-text {
+    flex: 2;
+    font-size: 16px;
+    color: #555;
+    line-height: 1.8;
+}
+
+.about-text strong {
+    color: #007BFF;
+}
+
+.about-text em {
+    color: #555;
+    font-style: italic;
+}
+
+@media (max-width: 768px) {
+    .about-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-photo {
+        margin-bottom: 20px;
+    }
 }
