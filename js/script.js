@@ -1,50 +1,50 @@
+// Ambil slide aktif terakhir dari localStorage, atau mulai dari slide pertama
 let currentSlide = localStorage.getItem("currentSlide") 
     ? parseInt(localStorage.getItem("currentSlide")) 
     : 0;
+
+// Ambil semua elemen slide
 const slides = document.querySelectorAll(".slides");
 
-// Fungsi untuk menampilkan slide
+// Fungsi untuk menampilkan slide berdasarkan indeks
 function showSlide(index) {
     slides.forEach((slide, i) => {
-        slide.classList.toggle("active", i === index);
+        slide.classList.toggle("active", i === index); // Tampilkan slide aktif
     });
-    currentSlide = index;
-    localStorage.setItem("currentSlide", currentSlide); // Simpan slide saat ini ke localStorage
+    currentSlide = index; // Perbarui indeks slide saat ini
+    localStorage.setItem("currentSlide", currentSlide); // Simpan ke localStorage
 }
 
-// Fungsi untuk slide berikutnya
+// Fungsi untuk menampilkan slide berikutnya
 function nextSlide() {
-    const nextIndex = (currentSlide + 1) % slides.length;
-    showSlide(nextIndex);
+    const nextIndex = (currentSlide + 1) % slides.length; // Hitung indeks slide berikutnya
+    showSlide(nextIndex); // Tampilkan slide berikutnya
 }
 
-// Tampilkan slide terakhir dari localStorage
+// Inisialisasi: tampilkan slide terakhir atau slide pertama
 showSlide(currentSlide);
 
 // Ganti slide otomatis setiap 3 detik
 setInterval(nextSlide, 3000);
 
-// let currentSlide = 0;
-// const slides = document.querySelectorAll(".slides");
+document.addEventListener('DOMContentLoaded', () => {
+    const familyItems = document.querySelectorAll('.family-item');
+    const modalBody = document.querySelector('#familyModal .modal-body');
 
-// function showSlide(index) {
-//     slides[currentSlide].classList.remove("active");
-//     currentSlide = index;
-//     slides[currentSlide].classList.add("active");
-// }
+    familyItems.forEach(item => {
+        item.addEventListener('click', () => {
+            const name = item.getAttribute('data-name');
+            const profesi = item.getAttribute('data-profesi');
+            const hobi = item.getAttribute('data-hobi');
 
-// function nextSlide() {
-//     let nextIndex = (currentSlide + 1) % slides.length;
-//     showSlide(nextIndex);
-// }
+            modalBody.innerHTML = `
+                <p><strong>Nama:</strong> ${name}</p>
+                <p><strong>Profesi:</strong> ${profesi}</p>
+                <p><strong>Hobi:</strong> ${hobi}</p>
+            `;
 
-// setInterval(nextSlide, 3000); // Automatically change slides every 3 seconds
-
-// document.querySelectorAll('.navbar a').forEach(anchor => {
-//     anchor.addEventListener('click', function(e) {
-//         e.preventDefault();
-//         document.querySelector(this.getAttribute('href')).scrollIntoView({
-//             behavior: 'smooth'
-//         });
-//     });
-// });
+            const modal = new bootstrap.Modal(document.getElementById('familyModal'));
+            modal.show();
+        });
+    });
+});

@@ -17,7 +17,7 @@ body {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     z-index: 1000;
     height: 80vh;
-}   
+}
 
 .navbar a {
     text-decoration: none;
@@ -80,15 +80,17 @@ img {
 }
 
 .slideshow-container {
-    position: relative;
-    width: 100%;
-    margin: 0;
+    width: auto; /* Lebar slide */
+    height: 500px;
+    margin: auto; /* Agar slide berada di tengah */
+    position:relative; /* Untuk kontrol navigasi */
+    overflow: hidden; /* Sembunyikan bagian yang keluar dari container */
 }
 
 .slides {
     display: none;
     width: 100%;
-    height: 700px;
+    height: 100%;
 }
 
 .slides.active {
@@ -148,7 +150,7 @@ img {
 }
 
 .education-item {
-    flex: 1 1 calc(50% - 20px); /* 50% width with gap */
+    flex: 1 1 calc(50% - 20px);
     background-color: whitesmoke;
     padding: 20px;
     border-radius: 10px;
@@ -199,15 +201,17 @@ img {
     font-size: 18px;
     color: #007BFF;
 }
-#family{
+
+/* Family Section */
+#family {
     background-color: white;
     padding: 20px;
     margin-bottom: 20px;
     border-radius: 10px;
 }
 
-#family h2{
-    font-size: 28px;
+#family h2 {
+    font-size: 24px; /* Ukuran judul sedikit lebih kecil */
     color: #333;
     margin-bottom: 20px;
     text-align: center;
@@ -215,76 +219,90 @@ img {
     letter-spacing: 1px;
 }
 
-.family-content{
+.family-content {
     display: flex;
     flex-wrap: wrap;
-    gap: 20px;
+    gap: 15px; /* Mengurangi jarak antar-item */
     justify-content: center;
 }
 
-.family-item{
+.family-item {
     background-color: whitesmoke;
-    padding: 15px;
+    padding: 10px; /* Mengurangi padding */
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     text-align: center;
-    width: calc(30% - 20px);
+    width: calc(20% - 10px); /* Membuat item lebih kecil */
     transition: transform 0.3s, box-shadow 0.3s;
 }
 
-.family-item:hover{
+.family-item:hover {
     transform: translateY(-5px);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-.family-item img{
-    width: 150px;
-    height: 150px;
+.family-item img {
+    width: 100px; /* Ukuran gambar lebih kecil */
+    height: 100px;
     border-radius: 50%;
-    margin-bottom: 10px;
+    margin-bottom: 8px;
     object-fit: cover;
 }
 
-.family-item h3{
-    font-size: 20px;
+.family-item h3 {
+    font-size: 16px; /* Ukuran nama lebih kecil */
     color: #007BFF;
-    margin-bottom: 10px;
+    margin-bottom: 8px;
 }
 
-.family-item p{
-    font-size: 16px;
+.family-item p {
+    font-size: 14px; /* Ukuran deskripsi lebih kecil */
     color: #555;
-    margin: 5px 0;
+    margin: 4px 0;
 }
 
-@media (max-width: 768px){
-    .family-item{
-        width: calc(50% - 20px);
+/* Responsive Design */
+@media (max-width: 768px) {
+    .family-item {
+        width: calc(33% - 10px); /* Lebar item lebih besar untuk layar kecil */
     }
 }
 
-@media (max-width: 480px){
-    .family-item{
-        width: 100%;
+@media (max-width: 480px) {
+    .family-item {
+        width: 100%; /* Item mengambil lebar penuh untuk layar sangat kecil */
     }
 }
+
 
 /* About Section */
 #about {
     background-color: #f3f3f3;
-    padding: 20px;
-    margin-bottom: 20px;
+    padding: 80px 20px;
+    margin: 20px auto;
     border-radius: 10px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 90%;
 }
 
 #about h2 {
     font-size: 28px;
     color: #333;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
     text-align: center;
     text-transform: uppercase;
     letter-spacing: 1px;
+    position: relative;
+}
+
+#about h2::after {
+    content: "";
+    width: 60px;
+    height: 3px;
+    background-color: #007BFF;
+    display: block;
+    margin: 10px auto 0;
+    border-radius: 2px;
 }
 
 .about-content {
@@ -303,8 +321,14 @@ img {
 
 .about-photo img {
     width: 100%;
+    height: auto;
     border-radius: 50%;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.about-photo img:hover {
+    transform: scale(1.05);
 }
 
 .about-text {
@@ -312,6 +336,8 @@ img {
     font-size: 16px;
     color: #555;
     line-height: 1.8;
+    padding: 0 10px;
+    text-align: justify;
 }
 
 .about-text strong {
