@@ -16,7 +16,7 @@ body {
     padding: 10px 0;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     z-index: 1000;
-    height: 80vh;
+    height: 90vh;
 }
 
 .navbar a {
@@ -81,7 +81,7 @@ img {
 
 .slideshow-container {
     width: auto; /* Lebar slide */
-    height: 500px;
+    height: 400px;
     margin: auto; /* Agar slide berada di tengah */
     position:relative; /* Untuk kontrol navigasi */
     overflow: hidden; /* Sembunyikan bagian yang keluar dari container */
@@ -150,16 +150,16 @@ img {
 }
 
 .education-item {
-    flex: 1 1 calc(50% - 20px);
+    flex: 1 1 calc(50% - 10px);
     background-color: whitesmoke;
-    padding: 20px;
+    padding: 10px;
     border-radius: 10px;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s, box-shadow 0.3s;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: 10px;
+    gap: 0px;
     cursor: pointer;
 }
 
@@ -170,9 +170,10 @@ img {
 }
 
 .education-item h3 {
-    font-size: 20px;
+    font-size: 15px;
     color: #007BFF;
-    margin-bottom: 15px;
+    margin-bottom: 5px;
+    margin-top: 15px;
     border-bottom: 3px solid #007BFF;
     padding-bottom: 5px;
 }
@@ -184,9 +185,9 @@ img {
 }
 
 .education-item ul li {
-    font-size: 16px;
+    font-size: 10px;
     color: #555;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
     display: flex;
     align-items: center;
     gap: 8px;
@@ -206,7 +207,7 @@ img {
 #family {
     background-color: white;
     padding: 20px;
-    margin-bottom: 20px;
+    margin-bottom: 5px;
     border-radius: 10px;
 }
 
@@ -278,7 +279,7 @@ img {
 /* About Section */
 #about {
     background-color: #f3f3f3;
-    padding: 80px 20px;
+    padding: 20px 20px;
     margin: 20px auto;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
